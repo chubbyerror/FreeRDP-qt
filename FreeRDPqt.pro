@@ -43,5 +43,3 @@ OTHER_FILES += \
 
 HEADERS += \
     launchexternalapp.h
-
-QMAKE_LFLAGS += -static-libgcc
