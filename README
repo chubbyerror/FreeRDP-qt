@@ -2,6 +2,10 @@ FreeRDP-qt
 
 A Qt frontend for FreeRDP, an open-source remote desktop client.
 
+PREREQUISITES:
+Qt 4.7.3+
+FreeRDP 0.8.2
+
 TODO:
 1. Fix items that use CLComboBox. They currently throw a font error on runtime.
-2. Integrate the frontend into FreeRDP API instead of externally calling XFreeRDP.
+2. Integrate the frontend with FreeRDP API instead of externally calling XFreeRDP.
