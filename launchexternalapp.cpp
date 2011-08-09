@@ -11,6 +11,7 @@ void LaunchExternalApp::LaunchSlot(QVariant argList)
 {
     QStringList arguments = argList.toStringList();
     //qDebug() << arguments;
+    // Replace with new function to call FreeRDP API in future version
     process.start("xfreerdp",arguments);
 }
 

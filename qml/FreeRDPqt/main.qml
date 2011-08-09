@@ -3,7 +3,7 @@ import "../colibri"
 
 Rectangle {
     id: launcher
-    width: 360
+    width: 380
     height: 490
     color: "#000000"
     opacity: 1
@@ -336,7 +336,7 @@ Rectangle {
         width: 150
         height: 20
         color: "#ffffff"
-        text: "N/A"
+        text: "<ComboBox placeholder>"
         anchors.left: parent.left
         anchors.leftMargin: 200
         anchors.top: text_displayoptions.bottom
@@ -345,6 +345,11 @@ Rectangle {
 
     ListModel {
         id: geometryModel
+        ListElement {
+            selected: false
+            label: "640x480"
+            value: "640x480"
+        }
         ListElement {
             selected: false
             label: "800x600"
@@ -357,8 +362,48 @@ Rectangle {
         }
         ListElement {
             selected: false
+            label: "1280x720"
+            value: "1280x720"
+        }
+        ListElement {
+            selected: false
+            label: "1280x768"
+            value: "1280x768"
+        }
+        ListElement {
+            selected: false
+            label: "1280x1024"
+            value: "1280x1024"
+        }
+        ListElement {
+            selected: false
+            label: "1440x900"
+            value: "1440x900"
+        }
+        ListElement {
+            selected: false
+            label: "1680x1050"
+            value: "1680x1050"
+        }
+        ListElement {
+            selected: false
             label: "1600x1200"
             value: "1600x1200"
+        }
+        ListElement {
+            selected: false
+            label: "1920x1080"
+            value: "1920x1080"
+        }
+        ListElement {
+            selected: false
+            label: "Fit to device"
+            value: "fit"
+        }
+        ListElement {
+            selected: false
+            label: "custom"
+            value: "custom"
         }
     }
 
@@ -371,7 +416,7 @@ Rectangle {
         anchors.leftMargin: 20
         anchors.top: text_geometry.bottom
         anchors.topMargin: 10
-        font.pixelSize: 14
+        //font.pixelSize: 14
     }
 
     /*
@@ -392,11 +437,40 @@ Rectangle {
         width: 150
         height: 20
         color: "#ffffff"
-        text: "N/A"
+        text: "<ComboBox placeholder>"
         anchors.left: parent.left
         anchors.leftMargin: 200
         anchors.top: clcombobox_geometry.bottom
         anchors.topMargin: 10
+    }
+
+    ListModel {
+        id: bppModel
+        ListElement {
+            selected: false
+            label: "8"
+            value: "8"
+        }
+        ListElement {
+            selected: false
+            label: "15"
+            value: "15"
+        }
+        ListElement {
+            selected: false
+            label: "16"
+            value: "16"
+        }
+        ListElement {
+            selected: false
+            label: "24"
+            value: "24"
+        }
+        ListElement {
+            selected: false
+            label: "32"
+            value: "32"
+        }
     }
 
     Text {
@@ -474,11 +548,30 @@ Rectangle {
         width: 150
         height: 20
         color: "#ffffff"
-        text: "N/A"
+        text: "<ComboBox placeholder>"
         anchors.left: parent.left
         anchors.leftMargin: 200
         anchors.top: clcheckbox_compression.bottom
         anchors.topMargin: 10
+    }
+
+    ListModel {
+        id: experienceModel
+        ListElement {
+            selected: true
+            label: "Modem"
+            value: "modem"
+        }
+        ListElement {
+            selected: false
+            label: "Broadband"
+            value: "broadband"
+        }
+        ListElement {
+            selected: false
+            label: "LAN"
+            value: "lan"
+        }
     }
 
     CLButton {
